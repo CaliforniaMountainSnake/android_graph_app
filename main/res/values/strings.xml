@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Test Graph App</string>
+    <string name="draw_button_text">Построить!</string>
+
+    <string name="nan_error_message">Вероятно, неверно задана область определения для заданной функции. Убедитесь, что функция непрерывна на всей области определения и что на ее протяжении не выполняются операции вроде деления на ноль или возведения отрицательного числа в дробную степень. Текст ошибки: %1$s</string>
+    <string name="unknown_exception_error_message">Неизвестное непойманное исключение при рисовании графика.\n%1$s: %2$s</string>
+    <string name="dialog_button_text">OK</string>
+    <string name="dialog_title_error">Ошибка!</string>
+    <string name="dialog_title_info">Info</string>
+    <string name="point_info_text">X: %1$f\nY: %2$f</string>
+
+    <string name="errors_title">Некорректно заполнены некоторые поля:\n</string>
+    <string name="error_formatting">- %1$s\n</string>
+    <string name="error_empty_poles">Поля не должны быть пустыми!</string>
+    <string name="error_wrong_dots_count">Число точек графика должно находиться в пределах от %1$d до %2$d.</string>
+    <string name="error_wrong_definition_area">Начало и конец области определения должны находиться в пределах от %1$f до %2$f.</string>
+    <string name="error_wrong_definition_area_2">Начало области определения не может быть дальше ее конца.</string>
+
+    <string name="y_label">y =</string>
+    <string name="dots_count_label">Точек\nграфика:</string>
+    <string name="definition_area_label">Область\nопределения:</string>
+    <string name="definition_area_arrow_label"><![CDATA[->]]></string>
+
+    <string name="function_default_value">1.1 ^ x + sin x</string>
+    <string name="dots_count_default_value">100</string>
+    <string name="definition_area_min_default_value">-10</string>
+    <string name="definition_area_max_default_value">10</string>
+</resources>

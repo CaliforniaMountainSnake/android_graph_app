@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewY"
+        android:layout_width="82dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/y_label"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextFunction"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="12dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/function_default_value"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/buttonDrawPlot"
+        app:layout_constraintStart_toEndOf="@+id/textViewY"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/graphMain"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDefinitionAreaTo" />
+
+    <Button
+        android:id="@+id/buttonDrawPlot"
+        android:layout_width="120dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:text="@string/draw_button_text"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextDefinitionAreaTo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewDotsCount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/dots_count_label"
+        app:layout_constraintEnd_toEndOf="@+id/textViewY"
+        app:layout_constraintHorizontal_bias="0.208"
+        app:layout_constraintStart_toStartOf="@+id/textViewY"
+        app:layout_constraintTop_toTopOf="@+id/editTextDotsCount" />
+
+    <EditText
+        android:id="@+id/editTextDotsCount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:text="@string/dots_count_default_value"
+        app:layout_constraintEnd_toEndOf="@+id/editTextFunction"
+        app:layout_constraintStart_toStartOf="@+id/editTextFunction"
+        app:layout_constraintTop_toBottomOf="@+id/editTextFunction" />
+
+    <TextView
+        android:id="@+id/textViewDefinitionArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/definition_area_label"
+        app:layout_constraintEnd_toEndOf="@+id/textViewDotsCount"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textViewDotsCount"
+        app:layout_constraintTop_toTopOf="@+id/editTextDefinitionAreaFrom" />
+
+    <EditText
+        android:id="@+id/editTextDefinitionAreaFrom"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="numberDecimal|numberSigned"
+        android:text="@string/definition_area_min_default_value"
+        app:layout_constraintStart_toStartOf="@+id/editTextDotsCount"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDotsCount" />
+
+    <TextView
+        android:id="@+id/textViewDefinitionAreaLabel"
+        android:layout_width="38dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginStart="2dp"
+        android:text="@string/definition_area_arrow_label"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/editTextDefinitionAreaTo"
+        app:layout_constraintStart_toEndOf="@+id/editTextDefinitionAreaFrom"
+        app:layout_constraintTop_toTopOf="@+id/editTextDefinitionAreaFrom" />
+
+    <EditText
+        android:id="@+id/editTextDefinitionAreaTo"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal|numberSigned"
+        android:text="@string/definition_area_max_default_value"
+        app:layout_constraintEnd_toEndOf="@+id/editTextFunction"
+        app:layout_constraintTop_toTopOf="@+id/editTextDefinitionAreaFrom" />
+
+</android.support.constraint.ConstraintLayout>
